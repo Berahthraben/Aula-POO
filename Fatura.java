@@ -15,6 +15,9 @@ public class Fatura {
     int qtd;
     double pre;
     
+    public Fatura(){
+    }
+       
     public Fatura(String nome, String desc, int qtd, int pre){
         this.nome = nome;
         this.desc = desc;
@@ -22,29 +25,32 @@ public class Fatura {
         this.pre = pre;
     }
     
-    protected String GetNome(){
+    public String GetNome(){
         return this.nome;
     }
-    protected String GetDesc(){
+    public String GetDesc(){
         return this.desc;
     }
-    protected int GetQtd(){
+    public int GetQtd(){
         return this.qtd;
     }
-    protected double GetPre(){
+    public double GetPre(){
         return this.pre;
     }
-    protected void SetNome(String nome){
+    public void SetNome(String nome){
         this.nome = nome;
     }
-    protected void SetDesc(String desc){
+    public void SetDesc(String desc){
         this.desc = desc;
     }
-    protected void SetQtd(int qtd){
+    public void SetQtd(int qtd){
         this.qtd = qtd;
     }
-    protected void SetPre(double pre){
+    public void SetPre(double pre){
         this.pre = pre;
+    }
+    public double GetFaturaTotal(){
+        return this.pre * (double)this.qtd;   
     }
     /*
     Fatura fatura = new Fatura(1,2,3,4);
